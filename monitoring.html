@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link href="./src/output.css" rel="stylesheet">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monitoring Suhu dan Kelembaban</title>
 </head>
-<body>
-    <h1>Monitoring Suhu</h1>
-    <!-- Masukkan kode IFrame di sini -->
-    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2704842/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
 
-    <h1>Monitoring Kelembaban</h1>
-    <!-- Masukkan kode IFrame lainnya jika ada -->
-    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2704842/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+<body>
+    <div>
+        <div class="w-full container md:px-16 px-8 pt-6">
+            <div class="">
+                <h1 class="font-bold">Monitoring Suhu</h1>
+                <div class="bg-blue-500 w-full h-1/5 rounded-lg mt-6 text-white p-4">
+                    <div class="flex text-5xl font-bold justify-between mb-4">
+                        Suhu <span class="flex">30<img src="src/images/icons8-weather-64 (1).png " alt=""
+                                class="h-3 w-3 "></span>
+                    </div>
+                    <div class="flex text-2xl justify-between">
+                        kelembaban <span class="flex">30<img src="src/images/icons8-farenheit-24.png " alt=""
+                                class="h-3 w-3 "></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div>
+            <div class="px-8 mt-6 font-bold ">Update Data Suhu </div>
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;"
+                src="https://thingspeak.com/channels/2704842/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Suhu&type=line"></iframe>
+
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;"
+                src="https://thingspeak.com/channels/2704842/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Kelembaban&type=line"></iframe>
+
+        </div>
+    </div>
 </body>
+
 </html>
